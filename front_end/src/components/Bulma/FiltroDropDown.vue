@@ -50,13 +50,10 @@
 </template>
 
 <style scoped>
-/* .dropdown-content{
-    background-color: blue;
+.dropdown-content{ 
+    background-color: rgb(233, 233, 84)
   
 }
-.dropdown-content button{
-    
-} */
 </style>
 
 

@@ -15,7 +15,7 @@
       <tr
         v-for="(venda, indice) in $store.state.vendas"
         :key="indice"
-        @click="editarCadastro(venda.id)"
+        @click="$store.dispatch('editar', venda.id) "
       >
         <th>{{ venda.id }}</th>
         <td>{{ venda.cliente }}</td>

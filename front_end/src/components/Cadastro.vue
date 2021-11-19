@@ -13,14 +13,16 @@
               <input
                 class="input is-rounded"
                 required
-                v-model="Id"
+                v-model="id"
                 type="number"
-                v-if="!state.isEditing"
+                min="1"
+                step="1"
+                v-if="!$store.state.isEditing"
               />
               <input
                 class="input is-rounded"
                 required
-                v-model="R_id"
+                v-model="$store.state.id"
                 type="number"
                 v-else
                 readonly
@@ -153,9 +155,9 @@
         <button
           class="button is-success"
           id="botao-sem-login"
-          @click="$router.go(-1)"
+          @click.prevent="$router.go(-1)"
         >
-          cancelar
+          voltar
         </button>
         <button
           class="button is-success"
@@ -176,16 +178,8 @@
   </section>
 </template>
 <script>
-import {
-  requestPost,
-  requestDelete,
-  requestPatch,
-} from "../service/ajaxRequest";
-import { ref, reactive } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
-import { resquestGET } from "../service/ajaxRequest";
-import route from "../router/index";
 export default {
+  mounted: function (){ this.$store.commit("verificarEdicao", window.location.pathname)},
   computed: {
     cliente: {
       get() {
@@ -200,7 +194,7 @@ export default {
         return this.$store.state.id;
       },
       set(newValue) {
-        this.$store.commit("setId", newValue);
+        this.$store.commit("setID", newValue);
       },
     },
     data: {
@@ -248,6 +242,8 @@ export default {
     },
   },
 };
+
+
 </script>
 <style scoped>
 section {

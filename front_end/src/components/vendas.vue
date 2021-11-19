@@ -15,15 +15,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  /* backdrop-filter: blur(3px);
-  justify-content: center;
-  align-items: center;
-  animation: all 0.5s; */
-  /* background: linear-gradient(217deg, #dfde92, rgb(240, 240, 123)); */
-  background: lightblue;
-}
-
 table {
   position: relative;
   margin: 0.4em;
@@ -46,8 +37,4 @@ table {
   width: 100%;
 }
 
-.first {
-}
-.second {
-}
 </style>

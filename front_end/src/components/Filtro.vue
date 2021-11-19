@@ -3,6 +3,7 @@
 <div class="columns">
   <div class="column">
    <FiltroDropDown></FiltroDropDown>
+   <button id="segundo" class="button is-link" @click.prevent="$store.dispatch('getVendas')">Remover filtros</button>
   </div>
   <div class="column" v-if="$store.state.filtroAtual != 'intervalo'">
     <FiltroNomeCliente ></FiltroNomeCliente>
@@ -21,7 +22,7 @@
 
 <script>
 import FiltroDropDown from "./Bulma/FiltroDropDown.vue"
-import FiltroNomeCliente from "./Bulma/FiltroNomeCliente.vue"
+import FiltroNomeCliente from "./Bulma/FiltroNome.vue"
 import FiltroIntervalo from "./Bulma/FiltroIntervalo.vue"
 
 export default({
@@ -30,6 +31,9 @@ export default({
 </script>
 
 <style scoped>
+#segundo{
+  margin-left: 0.1em;
+}
 </style>
 
 

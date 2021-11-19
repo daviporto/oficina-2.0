@@ -62,3 +62,9 @@ export default{
 }
 
 </script>
+
+<style scoped>
+input{
+  background-color: rgb(233, 205, 44);
+}
+</style>

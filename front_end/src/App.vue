@@ -1,6 +1,15 @@
 <template>
-  <router-view/>
+  <section id="background">
+    <Notificacao id='notificacao' v-if="$store.state.notificacaoAberta"></Notificacao>
+    <router-view />
+  </section>
 </template>
+<script>
+import Notificacao from "./components/Bulma/Notificacao.vue"
+export default({
+    components: {Notificacao},
+})
+</script>
 
 <style lang="scss">
 #app {
@@ -8,11 +17,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background: #dfde92;
 }
-body{
-  //  background: linear-gradient(217deg, #35332b, #22211d);
-  background: purple;
+#notificacao{
+position: absolute;
+top: 0px;
+width: 100%;
+z-index: 10;
 }
+
 
 </style>

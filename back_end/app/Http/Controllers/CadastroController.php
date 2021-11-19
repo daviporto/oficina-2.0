@@ -39,11 +39,6 @@ class CadastroController extends Controller
     public function store(Request $request)
     {
         return Cadastro::adicionar($request);
-        // try {
-        //     return Cadastro::create($request->all());
-        // } catch (Exception $e) {
-        //     return response()->json(['error' => $request->all()], 422);
-        // }
     }
 
     /**
@@ -65,8 +60,7 @@ class CadastroController extends Controller
      */
     public function edit($id)
     {
-        // Cadastro::getCadastrosById($id);
-        return DB::table('cadastro')->find($id);
+        return Cadastro::getCadastroById($id);
     }
 
     /**

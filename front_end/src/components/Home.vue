@@ -1,9 +1,7 @@
 <template>
   <section>
     <section class="box">
-      <!-- <button class="button is-link is-outlined">Adicionar novas vendas</button>
-      <button class="button is-link is-outlined"></button> -->
-      <router-link class="button is-link is-outlined" to="/cadastro">Adicionar novas vendas</router-link> |
+      <router-link class="button is-link is-outlined" to="/cadastro">Adicionar novas vendas</router-link> 
     <router-link class="button is-link is-outlined" to="/vendas">Visualizas e/ou editar vendas</router-link>
     </section>
   </section>
@@ -20,7 +18,8 @@ section {
   justify-content: center;
   align-items: center;
   animation: all 0.5s;
-  background: linear-gradient(217deg, #35332b, #22211d);
+  background: linear-gradient(217deg, #dfde92, #e5e48a);
+    background: #dfc140;
 }
 
 .box {
@@ -31,7 +30,7 @@ section {
   background-color: #38372a03;
   padding: 15px;
   margin-top: 10em;
-  background: #22201a;
+  background: #dfc140;
   display: flex;
 }
 
